@@ -1,16 +1,54 @@
 <html>
-    <head>
+
+<head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+</head>
+
+<body>
+    <div id="round-body">
         <h1>Simple Interest Calculator</h1>
+        <div id='center-body'>
+            <table>
+                <tbody>
+                    <tr>
+                        <td> <label for="fname">Amount</label></td>
+                        <td><input type="number" id="principal"></td>
+                    </tr>
+                    <tr>
+                        <td>Rate</td>
+                        <td><input type="range" min="0" max="30" value="10.5" class="slider" id="rate" oninput="slide()" step="0.25"><label id="slider">10.5%</label></td>
+                    </tr>
+                    <tr>
+                        <td> No. of Years</td>
+                        <td><select id="years">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+                          </select></td>
+                    </tr>
+                    <tr>
+                        <td> <button onclick="compute()">Compute Interest</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <div id="result"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br/>
+        </div>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+
+        <br> Ⓒ Everyone Can Get Rich
+
+    </div>
+</body>
+
 </html>
